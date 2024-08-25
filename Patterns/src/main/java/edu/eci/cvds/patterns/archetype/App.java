@@ -8,6 +8,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hola " +  );
+        String mensaje = (args.length > 0) ? "Hello " + args[0] + " " + args[1] + ":)"  : "Hello World!";
+        System.out.println(mensaje);
     }
 }
