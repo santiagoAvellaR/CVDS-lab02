@@ -1,1 +1,9 @@
+Patterns\src\main\java\edu\eci\cvds\patterns\shapes\concrete\Pentagon.class
 edu\eci\cvds\patterns\archetype\App.class
+Patterns\src\main\java\edu\eci\cvds\patterns\shapes\concrete\Quadrilateral.class
+Patterns\src\main\java\edu\eci\cvds\patterns\shapes\concrete\Hexagon.class
+Patterns\src\main\java\edu\eci\cvds\patterns\shapes\ShapeFactory.class
+Patterns\src\main\java\edu\eci\cvds\patterns\shapes\RegularShapeType.class
+Patterns\src\main\java\edu\eci\cvds\patterns\shapes\concrete\Triangle.class
+Patterns\src\main\java\edu\eci\cvds\patterns\shapes\ShapeMain.class
+Patterns\src\main\java\edu\eci\cvds\patterns\shapes\Shape.class
