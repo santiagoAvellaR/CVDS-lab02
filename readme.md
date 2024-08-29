@@ -32,7 +32,8 @@ Id del Grupo: edu.eci.cvds
 Id del Artefacto: Patterns
 Paquete: edu.eci.cvds.patterns.archetype
 ```
-
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/creando_proyecto.png)
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/creando_proyecto2.png)
 Se debió haber creado en el directorio, un nuevo proyecto `Patterns` a partir de un modelo o arquetipo, que crea un conjunto de directorios con un conjunto de archivos básicos.
 
 Cambie al directorio `Patterns`:
@@ -70,7 +71,7 @@ salida muestra la estructura del proyecto, similar a como se muestra a continuac
 └───archetype
 AppTest.java
 ```
-
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/ver_conjunto_archivos.png)
 ## AJUSTAR ALGUNAS CONFIGURACIONES EN EL PROYECTO
 Edite el archivo `pom.xml` y realize la siguiente actualización:
 
@@ -88,7 +89,7 @@ Para compilar ejecute el comando:
 ```sh
 $ mvn package
 ```
-
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/compilar_ejecutar.png)
 Si maven no actualiza las dependencias utilice la opción `-U` así:
 ```sh
 $ mvn -U package
@@ -112,9 +113,14 @@ Otros parametros que se podrian enviar serian:
 
 Busque cómo ejecutar desde línea de comandos, un proyecto maven y verifique la salida cuando se ejecuta con la clase `App.java` como parámetro en "mainClass". Tip: https://www.mojohaus.org/exec-maven-plugin/usage.html
 
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/ejecuta_clase_app.png)
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/ejecuta_clase_app2.png)
 Realice el cambio en la clase `App.java` para crear un saludo personalizado, basado en los parámetros de entrada a la aplicación. 
 
 Utilizar la primera posición del parámetro que llega al método "main" para realizar elsaludo personalizado, en caso que no sea posible, se debe mantener el saludo como se encuentra actualmente:
+
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/saludo_personalizado.png)
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/saludo_personalizado_resultado.png)
 
 Buscar cómo enviar parámetros al plugin "exec". 
 
@@ -124,11 +130,16 @@ Ejecutar nuevamente la clase desde línea de comandos y verificar la salida: Hel
 
 Ejecutar la clase desde línea de comandos enviando su nombre como parámetro y verificar la salida. Ej: Hello Pepito!
 
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/enviando_parametros.png)
+
 Ejecutar la clase con su nombre y apellido como parámetro. ¿Qué sucedió?
 
-Verifique cómo enviar los parámetros de forma "compuesta" para que el saludo se realice con nombre y apellido.
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/enviando_parametros2.png)
 
+Verifique cómo enviar los parámetros de forma "compuesta" para que el saludo se realice con nombre y apellido.
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/modificando_app.png)
 Ejecutar nuevamente y verificar la salida en consola. Ej: Hello Pepito Perez!
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/ejecuta_clase_app3.png)
 
 ## HACER EL ESQUELETO DE LA APLICACIÓN
 Cree el paquete `edu.eci.cvds.patterns.shapes` y el paquete `edu.eci.cvds.patterns.shapes.concrete`.
