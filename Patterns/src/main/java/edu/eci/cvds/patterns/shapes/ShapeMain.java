@@ -21,7 +21,6 @@ public class ShapeMain {
             System.err.println(
                     "Parameter '" + args[0] + "' is not a valid RegularShapeType"
             );
-            return;
         }
     }
 }
