@@ -239,13 +239,22 @@ Ejecute múltiples veces la clase ShapeMain, usando el plugin exec de maven con 
 - Parámetro: pentagon
 - Parámetro: Hexagon
 
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/compilando.png)
+
 ¿Cuál(es) de las anteriores instrucciones se ejecutan y funcionan correctamente y por qué?
 - Sin parámetros: Se valida que hayan argumentos y que el número de argumentos sea exactamente 1, si no lanza el error de que se requieren parámetros. Por tanto, al poner en consola mvn exec:java, tendriamos como resultado:
 
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/sin_parametros.png)
+
 - Parámetro qwerty y pentagon: En el try, podemos verificar que se hace un RegularShapeType.valueOf(args[0]), este método posiblemente podría lanzar un error, en el caso en el que no encuentre coincidencias dentro los enums de RegularShapeType. Por tanto, pentagon y qwerty no funcionarían saliendo una excepcion de que el parametro no es valido.
+
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/qwerty.png)
+
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/pentagon.png)
 
 - Parámetro Hexagon: Al tener exactamente un argumento y este coincida con alguno de los enums, se crearía el objeto y llamaría a los métodos correspondientes. Por tanto, Hexagon ejecuta de manera correcta.
 
+![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/Hexagon.png)
 
 ## ENTREGAR
 - Se espera al menos que durante la sesión de laboratorio, se termine el ejercicio del saludo y haya un avance significativo del ejercicio de las figuras.
