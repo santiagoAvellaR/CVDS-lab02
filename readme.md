@@ -72,6 +72,7 @@ salida muestra la estructura del proyecto, similar a como se muestra a continuac
 AppTest.java
 ```
 ![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/ver_conjunto_archivos.png)
+
 ## AJUSTAR ALGUNAS CONFIGURACIONES EN EL PROYECTO
 Edite el archivo `pom.xml` y realize la siguiente actualización:
 
@@ -114,12 +115,15 @@ Otros parametros que se podrian enviar serian:
 Busque cómo ejecutar desde línea de comandos, un proyecto maven y verifique la salida cuando se ejecuta con la clase `App.java` como parámetro en "mainClass". Tip: https://www.mojohaus.org/exec-maven-plugin/usage.html
 
 ![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/ejecuta_clase_app.png)
+
 ![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/ejecuta_clase_app2.png)
+
 Realice el cambio en la clase `App.java` para crear un saludo personalizado, basado en los parámetros de entrada a la aplicación. 
 
 Utilizar la primera posición del parámetro que llega al método "main" para realizar elsaludo personalizado, en caso que no sea posible, se debe mantener el saludo como se encuentra actualmente:
 
 ![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/saludo_personalizado.png)
+
 ![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/saludo_personalizado_resultado.png)
 
 Buscar cómo enviar parámetros al plugin "exec". 
@@ -137,8 +141,11 @@ Ejecutar la clase con su nombre y apellido como parámetro. ¿Qué sucedió?
 ![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/enviando_parametros2.png)
 
 Verifique cómo enviar los parámetros de forma "compuesta" para que el saludo se realice con nombre y apellido.
+
 ![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/modificando_app.png)
+
 Ejecutar nuevamente y verificar la salida en consola. Ej: Hello Pepito Perez!
+
 ![imagen](https://github.com/santiagoAvellaR/CVDS-lab02/blob/master/images/ejecuta_clase_app3.png)
 
 ## HACER EL ESQUELETO DE LA APLICACIÓN
@@ -212,6 +219,9 @@ public class ShapeMain {
 Analice y asegúrese de entender cada una de las instrucciones que se encuentran en todas las clases que se crearon anteriormente. Cree el archivo `ShapeFactory.java` en el directorio `src/main/java/edu/eci/cvds/patterns/shapes` implementando el patrón fábrica (Hint: https://refactoring.guru/design-patterns/catalog), haciendo uso de la instrucción switch-case de Java y usando las enumeraciones.
 
 ¿Cuál fábrica hiciste? y ¿Cuál es mejor?
+
+Decidimos hacer la fábrica número 1, simple factory, ya que es lo que mejor se adapta al código que nos han dado inicialmente, dado un argumento, retornamos algún objeto de los que crea la fábrica. Es sencillo y funciona, no habría razón alguna para complicarse con los otros modelos.
+
 - Simple Factory:
 
 ![imagen](https://github.com/PDSW-ECI/labs/assets/4140058/0788a0b7-a071-4b90-ac3f-5982289ff3b3)
@@ -230,6 +240,12 @@ Ejecute múltiples veces la clase ShapeMain, usando el plugin exec de maven con 
 - Parámetro: Hexagon
 
 ¿Cuál(es) de las anteriores instrucciones se ejecutan y funcionan correctamente y por qué?
+- Sin parámetros: Se valida que hayan argumentos y que el número de argumentos sea exactamente 1, si no lanza el error de que se requieren parámetros. Por tanto, al poner en consola mvn exec:java, tendriamos como resultado:
+
+- Parámetro qwerty y pentagon: En el try, podemos verificar que se hace un RegularShapeType.valueOf(args[0]), este método posiblemente podría lanzar un error, en el caso en el que no encuentre coincidencias dentro los enums de RegularShapeType. Por tanto, pentagon y qwerty no funcionarían saliendo una excepcion de que el parametro no es valido.
+
+- Parámetro Hexagon: Al tener exactamente un argumento y este coincida con alguno de los enums, se crearía el objeto y llamaría a los métodos correspondientes. Por tanto, Hexagon ejecuta de manera correcta.
+
 
 ## ENTREGAR
 - Se espera al menos que durante la sesión de laboratorio, se termine el ejercicio del saludo y haya un avance significativo del ejercicio de las figuras.
